@@ -1,0 +1,18 @@
+:root {
+  --body-font: 'Source Sans Pro', arial, sans-serif;
+  --serif-font: 'Courgette', cursive;
+  --body-text-color: #444;
+  --text-bg-color: #fff;
+  --body-bg-color: #7eefff;
+  --body-bg-color2: #f0ffd2;
+  --timeline-border-color: #c0c0c0;
+
+  .darkmode {
+    --body-text-color: #eef;
+    --text-bg-color: #236;
+    --menu-bg: #003;
+    --timeline-border-color: #b0c0e0;
+    --footer-background: #113;
+  }
+}
+

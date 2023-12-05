@@ -1,0 +1,35 @@
+@import './scss/variables';
+@import './scss/fonts';
+
+body {
+  margin: 0;
+  background: var(--body-bg-color);
+  background: linear-gradient(328deg, var(--body-bg-color) 0%, var(--body-bg-color2) 100%);
+  background-attachment: fixed;
+  font-family: var(--body-font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--body-text-color, #000);
+  transition: color 2s;
+
+  &::before {
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(328deg, #08697b 0%, #022741 100%);
+    opacity: 0;
+    content: '';
+    transition: opacity 2s;
+  }
+
+  &.darkmode::before {
+    opacity: 1;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}

@@ -1,0 +1,302 @@
+@use 'scss/fonts';
+@use 'scss/breakpoints';
+
+.header {
+  height: initial;
+  padding: 0;
+  background: none;
+}
+
+.main-title {
+  position: absolute;
+  top: 80px;
+  margin: 0;
+  padding: 0 16px;
+  width: 100%;
+  font-weight: 900;
+  text-align: center;
+  text-shadow: 0 0 12px #338;
+  color: #fff;
+  opacity: 0.8;
+  font-size: 38px;
+}
+
+.main-nav {
+  padding: 0 16px;
+  background: var(--menu-bg, #159be7);
+  font-size: fonts.px2rem(10);
+  font-weight: bold;
+  color: var(--menu-text-color, #fff);
+  text-transform: uppercase;
+  transition: background 2s ease-in;
+
+  .ant-anchor {
+    justify-content: center;
+
+    .ant-anchor-link-title {
+      color: #fff;
+      transition: all .2s;
+
+      &:hover, &:focus {
+        opacity: 0.8;
+      }
+    }
+
+    .ant-anchor-link-active > .ant-anchor-link-title {
+      color: #fa5;
+    }
+
+    .ant-anchor-ink {
+      height: 4px;
+      background-color: #6bf;
+    }
+  }
+}
+
+.motto {
+  position: absolute;
+  right: 0;
+  bottom: 16px;
+  margin: 0;
+  padding: 0 16px;
+  font-family: var(--serif-font);
+  font-size: 28px;
+  color: #fff;
+  text-shadow: 0 0 12px #338;
+  opacity: 0.8;
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content {
+  &__section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    transition: all 2s;
+
+    &:nth-child(odd) {
+      flex-direction: row-reverse;
+      background: var(--text-bg-color);
+
+      .content__sheet {
+        align-items: start;
+      }
+    }
+  }
+
+  &__sheet {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 0;
+    padding: 24px 16px;
+    max-width: breakpoints.$content-max-width;
+    color: var(--body-text-color);
+
+    transition: all 2s;
+
+    h2,
+    h3,
+    p {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: breakpoints.$paragraph-max-width;
+    }
+  }
+
+  h2 {
+    font-family: var(--serif-font);
+    font-size: fonts.px2rem(40);
+    font-weight: 900;
+    color: inherit;
+  }
+
+  h3 {
+    font-family: var(--serif-font);
+  }
+
+  p {
+    font-size: fonts.px2rem(18);
+  }
+
+  h2,
+  h3,
+  p,
+  .ant-timeline {
+    color: inherit;
+  }
+
+  .ant-timeline .ant-timeline-item-tail {
+    border-inline-color: var(--timeline-border-color);
+  }
+
+  &__image {
+    margin-right: auto;
+    margin-left: auto;
+
+    img {
+      width: 100%;
+      height: auto;
+      max-width: breakpoints.$paragraph-max-width;
+    }
+  }
+}
+
+.brand-list {
+  display: flex;
+  gap: 48px;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+
+  li {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    font-size: fonts.px2rem(18);
+  }
+
+  svg {
+    width: auto;
+    height: 80px;
+  }
+}
+
+.footer {
+  background: var(--footer-background, #eee);
+
+  h2 {
+    color: inherit;
+  }
+
+  p {
+    font-size: fonts.px2rem(18);
+  }
+
+  a {
+    svg {
+      vertical-align: middle;
+    }
+  }
+
+  .content__sheet {
+    align-items: center;
+  }
+}
+
+.content, .footer {
+  a {
+    color: var(--link-color, #fa5);
+    transition: color .2s;
+
+    &:hover, &:focus {
+      color: var(--link-color-hover, #d83);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    svg {
+      vertical-align: middle;
+    }
+  }
+}
+
+.ant-timeline.ant-timeline-label:not(:has(.ant-timeline-item-right)) .ant-timeline-item-left .ant-timeline-item {
+  &-label {
+    position: static;
+    margin-inline-start: 26px;
+    width: 100%;
+    text-align: left;
+  }
+
+  &-tail {
+    inset-inline-start: 0;
+  }
+
+  &-head {
+    top: 6px;
+    inset-inline-start: 0;
+  }
+
+  &-content {
+    margin-inline-start: 26px;
+    inset-inline-start: 0;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+@media(max-width: 698px) {
+  .ant-timeline.ant-timeline-label .ant-timeline-item .ant-timeline-item {
+    &-label {
+      position: static;
+      margin-inline-start: 26px;
+      width: 100%;
+      text-align: left;
+    }
+
+    &-tail {
+      inset-inline-start: 0;
+    }
+
+    &-head {
+      top: 6px;
+      inset-inline-start: 0;
+    }
+
+    &-content {
+      margin-inline-start: 26px;
+      inset-inline-start: 0;
+      width: 100%;
+      text-align: left;
+    }
+  }
+}
+
+#who-i-am {
+  .content__image{
+    margin: initial;
+
+    img {
+      width: 256px;
+    }
+  }
+}
+
+#works {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: calc(var(--scroll) * 0.05 - 200px);
+    left: 0;
+    width: 100%;
+    height: 120vh;
+    background: url('/../public/images/offices.jpg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.1;
+    z-index: -1;
+  }
+}
+
+#studies {
+  .content__sheet {
+    max-width: breakpoints.$paragraph-max-width;
+    align-items: flex-start;
+  }
+}

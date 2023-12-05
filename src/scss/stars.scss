@@ -1,0 +1,73 @@
+@use 'sass:math';
+@function create-stars($n, $starSize) {
+  $stars: "#{random(100)}vw #{random(100)}vh #{math.div($starSize, 3)} #fff";
+
+  @for $i from 2 through $n {
+    $stars: "#{$stars} , #{random(100)}vw #{random(100)}vh #{math.div($starSize, 3)} #fff";
+  }
+  @return unquote($stars);
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-480px)
+    translateX(-100vw);
+  }
+}
+
+@keyframes animShootingStar {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+    width: 5px;
+  }
+  10% {
+    transform: translateY(350px)
+    translateX(-100vw) rotate(-35deg);
+    width: 800px;
+  }
+  100% {
+    transform: translateY(350px)
+    translateX(-100vw) rotate(-35deg);
+    width: 800px;
+  }
+}
+
+@mixin star-template($numStars, $starSize, $scrollSpeed) {
+  z-index: 10;
+  width: $starSize;
+  height: $starSize;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: create-stars($numStars, $starSize);
+  animation: animStar $scrollSpeed linear infinite;
+  &:after {
+    content: " ";
+    top: -600px;
+    width: $starSize;
+    height: $starSize;
+    border-radius: 50%;
+    position: absolute;
+    background: transparent;
+    box-shadow: create-stars($numStars, $starSize);
+  }
+}
+
+@mixin shooting-star-template($starSize, $speed) {
+  width: $starSize + 80px;
+  height: $starSize;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 200px;
+  background: linear-gradient(
+                  to left,
+                  rgba(255, 255, 255, 0),
+                  rgba(255, 255, 255, 1)
+  );
+  transform-origin: center bottom;
+  animation: animShootingStar $speed linear infinite;
+}
