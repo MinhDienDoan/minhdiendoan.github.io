@@ -1,0 +1,260 @@
+@import "./../scss/stars.scss";
+
+.hero {
+  position: relative;
+  height: calc(100vh - 80px);
+  max-height: 480px;
+  clip-path: inset(0 0 0 0);
+  overflow: hidden;
+
+  &__bg {
+    position: fixed;
+    width: 100%;
+    height: calc(100vh - 80px);
+    max-height: 480px;
+    overflow: hidden;
+    background: linear-gradient(180deg, #5298fa, #78f1d3);
+    transition: background 2s;
+
+    svg {
+      position: absolute;
+      right: calc(100vw * 0.421 - 382.2px);
+      width: auto;
+      height: calc(100vw * -0.0315 + 561px);
+
+      @media(min-width: 954px) {
+        height: auto;
+        right: 0;
+        bottom: calc((-100vw + 954px) * 0.3);
+      }
+
+      path,
+      stop {
+        transition: fill 2s ease-in, stop-color 2s ease-in;
+      }
+
+      #sun {
+        filter: drop-shadow(0 0 30px #fff);
+        transition: transform 2s ease-in-out;
+        transform-origin: 0 100%;
+      }
+
+      #clouds2 {
+        transform: translateY(calc(var(--scroll) * 0.5 + 0px));
+      }
+
+      #mountains2 {
+        transform: translateY(calc(var(--scroll) * 1 + 0px));
+      }
+
+      #mountains1 {
+        transform: translateY(calc(var(--scroll) * 1.5 + 0px));
+      }
+
+      #clouds1 {
+        transform: translateY(calc(var(--scroll) * 2 + 0px));
+      }
+
+      #birds {
+        transform: translate(calc(var(--scroll) * 1.5 + 0px), calc(var(--scroll) * 1.2 + 0px));
+      }
+
+      #trees {
+        transform: translateY(calc(var(--scroll) * 2.5 + 0px));
+      }
+
+      #big_tree {
+        transform: translateY(calc(var(--scroll) * 3 + 0px));
+      }
+
+      #front {
+        transform: translateY(calc(var(--scroll) * 3.5 + 0px));
+      }
+
+      #bird {
+        transform: translate(calc(var(--scroll) * -3 + 0px), calc(var(--scroll) * -0.5 + 0px));
+      }
+
+      #character {
+        transition: fill 3s;
+      }
+    }
+
+    .all_stars {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(180deg, #000025, #3674f9);
+      opacity: 0;
+      transition: opacity 2s;
+    }
+
+    .stars {
+      @include star-template(250, 1px, 1000s);
+      opacity: 0.5;
+    }
+    .stars2 {
+      @include star-template(125, 3px, 600s);
+      opacity: 0.75;
+    }
+    .stars3 {
+      @include star-template(5, 5px, 250s);
+      opacity: 0.9;
+    }
+    .comet {
+      @include shooting-star-template(5px, 15s);
+    }
+  }
+}
+
+.darkmode {
+  .hero__bg {
+    .all_stars {
+      opacity: 1;
+    }
+  }
+
+  #sun {
+    transform: rotate(90deg);
+  }
+
+  #sky-bg {
+    stop:first-child {
+      stop-color: #000025;
+    }
+
+    stop:last-child {
+      stop-color: #3674f9;
+    }
+  }
+
+  #mountain2-bg {
+    stop:first-child {
+      stop-color: #2855C6;
+    }
+
+    stop:last-child {
+      stop-color: #273281;
+    }
+  }
+
+  #mountain1-bg {
+    stop:first-child {
+      stop-color: #273281;
+    }
+
+    stop:last-child {
+      stop-color: #305DCE;
+    }
+  }
+
+  #mountain1b-bg {
+    stop:first-child {
+      stop-color: #3f6aa9;
+    }
+
+    stop:last-child {
+      stop-color: #2f4b85;
+    }
+  }
+
+  #cloud1-bg {
+    stop:first-child {
+      stop-color: #44618d;
+    }
+
+    stop:last-child {
+      stop-color: #2b4670;
+    }
+  }
+
+  #cloud1-base {
+    fill: #5a9af8 !important;
+  }
+
+  #cloud2-bg {
+    stop {
+      stop-color: #2564e8;
+    }
+  }
+
+  #rock {
+    stop:first-child {
+      stop-color: #0b1932;
+    }
+
+    stop:last-child {
+      stop-color: #030919;
+    }
+  }
+
+  #rock-front {
+    stop:first-child {
+      stop-color: #22396c;
+    }
+
+    stop:last-child {
+      stop-color: #082b52;
+    }
+  }
+
+  #grass {
+    stop:first-child {
+      stop-color: #051e4e;
+    }
+
+    stop:last-child {
+      stop-color: #0e3158;
+    }
+  }
+
+  #flowers {
+    stop:first-child {
+      stop-color: #356bf7;
+    }
+
+    stop:last-child {
+      stop-color: #a4c9ff;
+    }
+  }
+
+  #shadow {
+    stop:first-child {
+      stop-color: #082b52;
+    }
+
+    stop:last-child {
+      stop-color: #061d43;
+    }
+  }
+
+  #character {
+    fill: #082030 !important;
+  }
+
+  #sun-bg {
+    stop:first-child {
+      stop-color: #61aeea;
+    }
+
+    stop:last-child {
+      stop-color: #4983b9;
+    }
+  }
+
+  #birds {
+    fill: #659af8 !important;
+  }
+
+  #bird {
+    fill: #75aaff !important;
+  }
+
+  #trees {
+    fill: #030f31 !important;
+  }
+
+  #big_tree {
+    fill: #030f2e !important;
+  }
+}
