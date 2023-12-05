@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/minhdiendoan.github.io/static/css/main.7f960ab4.css",
+    "main.js": "/minhdiendoan.github.io/static/js/main.3d56d496.js",
+    "static/media/offices.jpg": "/minhdiendoan.github.io/static/media/offices.61f0a3160bc1c1a4d808.jpg",
+    "static/media/landscape.svg": "/minhdiendoan.github.io/static/media/landscape.8bbcf1188bfb0aae7578789978afa9e1.svg",
+    "static/media/wEO_EBrAnc9BLjLQAUk1VvoK.woff2": "/minhdiendoan.github.io/static/media/wEO_EBrAnc9BLjLQAUk1VvoK.4ca8e8718f589816853b.woff2",
+    "static/media/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7l.woff2": "/minhdiendoan.github.io/static/media/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7l.c0d191aa7fb798623030.woff2",
+    "static/media/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwlxdu.woff2": "/minhdiendoan.github.io/static/media/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwlxdu.a10519031679e736153a.woff2",
+    "static/media/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZclSds18Q.woff2": "/minhdiendoan.github.io/static/media/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZclSds18Q.bf6b28f3bde234baf63c.woff2",
+    "static/media/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7nsDI.woff2": "/minhdiendoan.github.io/static/media/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7nsDI.bedc627d54e911d4b6cd.woff2",
+    "static/media/6xKydSBYKcSV-LCoeQqfX1RYOo3iu4nwlxdu.woff2": "/minhdiendoan.github.io/static/media/6xKydSBYKcSV-LCoeQqfX1RYOo3iu4nwlxdu.086408af8f268379634c.woff2",
+    "index.html": "/minhdiendoan.github.io/index.html",
+    "main.7f960ab4.css.map": "/minhdiendoan.github.io/static/css/main.7f960ab4.css.map",
+    "main.3d56d496.js.map": "/minhdiendoan.github.io/static/js/main.3d56d496.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7f960ab4.css",
+    "static/js/main.3d56d496.js"
+  ]
+}
