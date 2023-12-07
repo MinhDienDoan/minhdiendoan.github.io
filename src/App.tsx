@@ -149,7 +149,7 @@ export default function App(){
                         Frontend development for digital publishing platforms such
                         as Tom's Hardware and Tom's Guide.
                         <br/>
-                        Implementation of A/B Testing and event and conversion
+                        Implementation of A/B Testing, event tracking and conversion
                         tracking. Worked with PHP Smarty template engine.
                       </p>
                     </>
@@ -162,7 +162,7 @@ export default function App(){
                       <Title level={3}>Net-Mobile AG (NTT Docomo)</Title>
                       <p>
                         My first job in Düsseldorf after moving to Germany.
-                        Cloning and maintaining mobile shop portals.
+                        Cloning and maintaining mobile shop portals built in PHP
                       </p>
                     </>
                   ),
