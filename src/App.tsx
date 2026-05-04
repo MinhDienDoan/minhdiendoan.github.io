@@ -343,9 +343,7 @@ export default function App(){
             <figure className="content__image">
               <img src={process.env.PUBLIC_URL + '/images/quartierkids.jpg'} width="640" height="360" alt="Minh Doan"/>
             </figure>
-            <p>Since May 2021, I've been part of a parent initiative named <a href="https://quartierkids.de"
-                                                                              target="_blank"
-                                                                              rel="noreferrer">Quartierkids</a>. The
+            <p>Since May 2021, I've been part of a parent initiative named Quartierkids. The
               movement created in our neighbourhood, claimed for the right for every kids to access the nearest school,
               under the motto "Kurze Beine, Kurze Wege" and led our city of Viersen to its first citizen decision
               ("Bürgerentscheid") in June 2023.</p>
@@ -361,7 +359,7 @@ export default function App(){
           <Title level={2}>Contact</Title>
           <p><a
             href="mailto:&#x67;&#x6d;&#46;&#x6d;&#x64;&#x6f;&#x61;&#x6e;&#64;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#46;&#x63;&#x6f;&#x6d;">Reach
-            me by email.</a> or on <a href="" target="_blank" rel="noreferrer"><SiLinkedin/> Linkedin</a></p>
+            me by email.</a> or on <a href="https://www.linkedin.com/in/minh-doan-frontend-developer/" target="_blank" rel="noreferrer"><SiLinkedin/> Linkedin</a></p>
         </div>
       </Footer>
     </>
