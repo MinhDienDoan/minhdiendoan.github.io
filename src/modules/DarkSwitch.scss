@@ -1,0 +1,31 @@
+.dark-switch {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  box-shadow: 0 0 0 4px rgba(255,255,255, 0.2);
+
+  svg {
+    display: block;
+    width: 20px;
+    height: 20px;
+  }
+  .ant-switch-inner {
+    padding-inline-end: 3px;
+
+    .ant-switch-inner-unchecked {
+      margin-top: -20px;
+    }
+
+    .ant-switch-inner-checked {
+      margin-top: 1px;
+    }
+  }
+
+  &.ant-switch-checked {
+    background: #068;
+
+    .ant-switch-inner {
+      padding-inline-start: 3px;
+    }
+  }
+}
